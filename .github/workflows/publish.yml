@@ -20,7 +20,11 @@ on:
         description: 'Rebuild even if the probe says the tree is current'
         type: boolean
         default: false
-  # No schedule: nothing to publish until its upstream is live.
+  # Daily at 06:17 UTC (2026-10-16, after the first dispatched run published a
+  # tree): each grid is the month's, so a run writes the same bytes until the
+  # month turns, and the 800-hour budget allows the run at the turn a miss.
+  schedule:
+    - cron: '17 6 * * *'
 
 permissions: {}
 

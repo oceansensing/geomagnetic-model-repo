@@ -1,0 +1,58 @@
+# What this repository publishes: the Earth's magnetic field by NOAA NCEI and the British Geological
+# Survey's World Magnetic Models, evaluated for the first instant of each month on a 0.25° world —
+# WMMHR2025's declination, inclination and five intensities, and each one's yearly change; and
+# WMM2025's blackout and caution zones, where a compass is unreliable, at 0.5°. The fetcher is the
+# site's `scripts/fetch-geomag.py`, the arithmetic `scripts/geomag.py`, held to NOAA's own test values.
+#
+# **To the second host alone** (`r2_only`, the site pipeline's D13, its note of 2026-10-09): every file of
+# these products is published to Cloudflare R2 and not to Pages, which carries the status alone.
+#
+# **The budget is a month and a missed day.** Each grid is the month's: its refTime the month's first
+# instant, its validTo the next month's. A daily run writes the same bytes until the month turns, so
+# 800 hours lets the run at the turn be missed once before the status calls it late.
+
+[contract]
+check = ["node", "scripts/test-schema.mjs"]
+roots = ["node", "scripts/test-schema.mjs", "--roots"]
+
+[defaults]
+timeout_minutes = 20
+
+[steps.geomag-field]
+cmd = ["python3", "scripts/fetch-geomag.py", "--only=geomag-field"]
+lane = "geomag"
+
+[steps.geomag-change]
+cmd = ["python3", "scripts/fetch-geomag.py", "--only=geomag-change"]
+lane = "geomag"
+
+[steps.geomag-zones]
+cmd = ["python3", "scripts/fetch-geomag.py", "--only=geomag-zones"]
+lane = "geomag"
+
+[products.geomag-field]
+title = "The Earth's magnetic field: declination, inclination and the five intensities, WMMHR2025, monthly at 0.25\u00b0 (NOAA NCEI and BGS)"
+step = "geomag-field"
+roots = ["decl-wmmhr.json", "incl-wmmhr.json", "magf-wmmhr.json", "magh-wmmhr.json", "magz-wmmhr.json", "magx-wmmhr.json", "magy-wmmhr.json"]
+writes = ["decl-wmmhr.json", "incl-wmmhr.json", "magf-wmmhr.json", "magh-wmmhr.json", "magz-wmmhr.json", "magx-wmmhr.json", "magy-wmmhr.json"]
+namespace = ["python3", "scripts/fetch-geomag.py", "--namespace", "--only=geomag-field"]
+max_age_hours = 800
+r2_only = true
+
+[products.geomag-change]
+title = "The magnetic field's yearly change: each element's secular variation, WMMHR2025, monthly at 0.25\u00b0 (NOAA NCEI and BGS)"
+step = "geomag-change"
+roots = ["decldot-wmmhr.json", "incldot-wmmhr.json", "magfdot-wmmhr.json", "maghdot-wmmhr.json", "magzdot-wmmhr.json", "magxdot-wmmhr.json", "magydot-wmmhr.json"]
+writes = ["decldot-wmmhr.json", "incldot-wmmhr.json", "magfdot-wmmhr.json", "maghdot-wmmhr.json", "magzdot-wmmhr.json", "magxdot-wmmhr.json", "magydot-wmmhr.json"]
+namespace = ["python3", "scripts/fetch-geomag.py", "--namespace", "--only=geomag-change"]
+max_age_hours = 800
+r2_only = true
+
+[products.geomag-zones]
+title = "Compass blackout and caution zones, WMM2025, monthly at 0.5\u00b0 (NOAA NCEI and BGS)"
+step = "geomag-zones"
+roots = ["magzone-wmm.json"]
+writes = ["magzone-wmm.json"]
+namespace = ["python3", "scripts/fetch-geomag.py", "--namespace", "--only=geomag-zones"]
+max_age_hours = 800
+r2_only = true

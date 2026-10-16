@@ -7,9 +7,10 @@
 # **To the second host alone** (`r2_only`, the site pipeline's D13, its note of 2026-10-09): every file of
 # these products is published to Cloudflare R2 and not to Pages, which carries the status alone.
 #
-# **The budget is a month and a missed day.** Each grid is the month's: its refTime the month's first
-# instant, its validTo the next month's. A daily run writes the same bytes until the month turns, so
-# 800 hours lets the run at the turn be missed once before the status calls it late.
+# **The budget is a month and a missed day.** Each grid is the field at the month's first instant, its
+# refTime, with no span (its values are no mean) and the model as its stream. A daily run writes the
+# same bytes until the month turns, so 800 hours lets the run at the turn be missed once before the
+# status calls it late.
 
 [contract]
 check = ["node", "scripts/test-schema.mjs"]

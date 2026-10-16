@@ -18,6 +18,13 @@ The dispatched run 38926496364 (15:45–15:47 UTC) was green: the three products
 one matching the contract, the weakest field 21,989 nT over South America; R2 equal to the build (23 files),
 Pages carrying the status alone. The schedule, daily at 06:17 UTC, in the same commit as this entry.
 
+## 2026-10-16: the headers, an instant
+
+The first run's headers carried the month as a span (`validFrom`, `validTo`), which the contract keeps for a
+mean, and an undeclared `model`. Since the site's `3d63c54` each grid says the instant evaluated — its
+`refTime`, the month's first — with no span, and names its model as its `stream`. The dispatched run
+38933190295 (16:35–16:37 UTC) republished the fifteen, green.
+
 ## Open
 
 1. The month's turn read: each grid's refTime moving to the new month, and nothing new published between turns.

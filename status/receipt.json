@@ -1,0 +1,17 @@
+{
+ "schema": 1,
+ "generated": "2026-10-24T06:39:32Z",
+ "mode": "full",
+ "fates": {
+  "geomag-field": "fresh",
+  "geomag-change": "fresh",
+  "geomag-zones": "fresh"
+ },
+ "reasons": {},
+ "built": {},
+ "withheld": {},
+ "deploy": true,
+ "notes": [],
+ "behind": [],
+ "tile_keys": {}
+}

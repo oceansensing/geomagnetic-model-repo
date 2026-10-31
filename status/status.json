@@ -1,0 +1,90 @@
+{
+ "schema": 2,
+ "contract": 1,
+ "generated": "2026-10-31T06:26:22Z",
+ "mode": "full",
+ "run": {
+  "id": "41176537935",
+  "url": "https://github.com/oceansensing/geomagnetic-model-repo/actions/runs/41176537935"
+ },
+ "schedule": {
+  "crons": [
+   "17 6 * * *"
+  ],
+  "longestGapHours": 24.0
+ },
+ "products": {
+  "geomag-field": {
+   "title": "The Earth's magnetic field: declination, inclination and the five intensities, WMMHR2025, monthly at 0.25\u00b0 (NOAA NCEI and BGS)",
+   "roots": [
+    "decl-wmmhr.json",
+    "incl-wmmhr.json",
+    "magf-wmmhr.json",
+    "magh-wmmhr.json",
+    "magz-wmmhr.json",
+    "magx-wmmhr.json",
+    "magy-wmmhr.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-31T06:26:22Z",
+   "updated": "2026-10-16T16:36:43Z",
+   "hour": "2026-10-01T00:00:00Z",
+   "modelRun": null,
+   "source": "NOAA NCEI and the British Geological Survey",
+   "hours": [
+    "2026-10-01T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 726.44,
+   "nearestOffsetHours": 726.44
+  },
+  "geomag-change": {
+   "title": "The magnetic field's yearly change: each element's secular variation, WMMHR2025, monthly at 0.25\u00b0 (NOAA NCEI and BGS)",
+   "roots": [
+    "decldot-wmmhr.json",
+    "incldot-wmmhr.json",
+    "magfdot-wmmhr.json",
+    "maghdot-wmmhr.json",
+    "magzdot-wmmhr.json",
+    "magxdot-wmmhr.json",
+    "magydot-wmmhr.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-31T06:26:22Z",
+   "updated": "2026-10-16T16:36:43Z",
+   "hour": "2026-10-01T00:00:00Z",
+   "modelRun": null,
+   "source": "NOAA NCEI and the British Geological Survey",
+   "hours": [
+    "2026-10-01T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 726.44,
+   "nearestOffsetHours": 726.44
+  },
+  "geomag-zones": {
+   "title": "Compass blackout and caution zones, WMM2025, monthly at 0.5\u00b0 (NOAA NCEI and BGS)",
+   "roots": [
+    "magzone-wmm.json"
+   ],
+   "fate": "fresh",
+   "reason": null,
+   "checked": "2026-10-31T06:26:22Z",
+   "updated": "2026-10-16T16:36:43Z",
+   "hour": "2026-10-01T00:00:00Z",
+   "modelRun": null,
+   "source": "NOAA NCEI and the British Geological Survey",
+   "hours": [
+    "2026-10-01T00:00:00Z"
+   ],
+   "stale": false,
+   "staleCause": null,
+   "ageHours": 726.44,
+   "nearestOffsetHours": 726.44
+  }
+ }
+}

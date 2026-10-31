@@ -1,0 +1,45 @@
+{
+ "schema": 1,
+ "product": "geomag-field",
+ "title": "The Earth's magnetic field: declination, inclination and the five intensities, WMMHR2025, monthly at 0.25\u00b0 (NOAA NCEI and BGS)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-10-31T06:26:22Z",
+ "updated": "2026-10-16T16:36:43Z",
+ "hour": "2026-10-01T00:00:00Z",
+ "modelRun": null,
+ "source": "NOAA NCEI and the British Geological Survey",
+ "hours": [
+  "2026-10-01T00:00:00Z"
+ ],
+ "files": {
+  "decl-wmmhr.json": {
+   "bytes": 6245315,
+   "sha256": "4ab4a4e23805a90c934d32ad91baf53244b32880cd70337616b8977612b61cc6"
+  },
+  "incl-wmmhr.json": {
+   "bytes": 6581295,
+   "sha256": "d7aabf1019d3f12344f0caa5ab7f6075f09e4ff7bff8ab51e90fcdbe16e94924"
+  },
+  "magf-wmmhr.json": {
+   "bytes": 6221008,
+   "sha256": "5ddba30aaad1cc00e82c5b3d77a1e686da165a393d4689d12807de6f88bc974b"
+  },
+  "magh-wmmhr.json": {
+   "bytes": 6056083,
+   "sha256": "bae47d0ef4ccdb59d4577b7f0c58e3fd27887dc9f5a7fdb9f91efdff331260ec"
+  },
+  "magx-wmmhr.json": {
+   "bytes": 6008160,
+   "sha256": "78b98ffe130689d4f366c3913ae504a579f8af9fdac1b52c83b1030ca9d476b6"
+  },
+  "magy-wmmhr.json": {
+   "bytes": 5667693,
+   "sha256": "d1ba0fc410ac6a7f0d4d36bae37901222813e543bd36d0b99843bd77e79cb1be"
+  },
+  "magz-wmmhr.json": {
+   "bytes": 6651708,
+   "sha256": "c0f346e4145894353d44329347103dc471e0376204fd7b56f5e0cd2062ac0394"
+  }
+ }
+}

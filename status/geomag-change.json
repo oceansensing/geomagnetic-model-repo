@@ -1,0 +1,45 @@
+{
+ "schema": 1,
+ "product": "geomag-change",
+ "title": "The magnetic field's yearly change: each element's secular variation, WMMHR2025, monthly at 0.25\u00b0 (NOAA NCEI and BGS)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T06:26:41Z",
+ "updated": "2026-11-01T06:28:05Z",
+ "hour": "2026-11-01T00:00:00Z",
+ "modelRun": null,
+ "source": "NOAA NCEI and the British Geological Survey",
+ "hours": [
+  "2026-11-01T00:00:00Z"
+ ],
+ "files": {
+  "decldot-wmmhr.json": {
+   "bytes": 6670792,
+   "sha256": "b1ceec57b72bb8b904e13f591bb7503f3f86ef2a848034609a8029bb404c1cd2"
+  },
+  "incldot-wmmhr.json": {
+   "bytes": 6489805,
+   "sha256": "d1de9e73e2c6c36ce40c4c1713e03a3b6cf042d9e24fd4ddbf80288dce464c74"
+  },
+  "magfdot-wmmhr.json": {
+   "bytes": 5541116,
+   "sha256": "f1ce3f32a42b07e945c3e0797d4b37bf62ec7a69e176943a75066fbbcc0c9938"
+  },
+  "maghdot-wmmhr.json": {
+   "bytes": 5219897,
+   "sha256": "60c6731b2f8a2ad41fc51da248c043be758fd1c0eca2ba57cfa002f78aa50645"
+  },
+  "magxdot-wmmhr.json": {
+   "bytes": 5374400,
+   "sha256": "893bdca0c8baf4caf27b6754ebbc30354179ad285b32720378c8b1a09281d95f"
+  },
+  "magydot-wmmhr.json": {
+   "bytes": 5348619,
+   "sha256": "e7a875f7ddbaac599fc450f754eb83f1cab8f2018aec90e43ce3124afa7680bb"
+  },
+  "magzdot-wmmhr.json": {
+   "bytes": 5302011,
+   "sha256": "17da6efe0c22587a25f4320816a498e635d6778f34cd3641ad88b8b4041b9130"
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "schema": 1,
+ "product": "geomag-zones",
+ "title": "Compass blackout and caution zones, WMM2025, monthly at 0.5\u00b0 (NOAA NCEI and BGS)",
+ "fate": "fresh",
+ "reason": null,
+ "checked": "2026-11-07T06:26:41Z",
+ "updated": "2026-11-01T06:28:05Z",
+ "hour": "2026-11-01T00:00:00Z",
+ "modelRun": null,
+ "source": "NOAA NCEI and the British Geological Survey",
+ "hours": [
+  "2026-11-01T00:00:00Z"
+ ],
+ "files": {
+  "magzone-wmm.json": {
+   "bytes": 1226153,
+   "sha256": "c6ac5aaa07a19414eb0b13748ceeacb6faa383061cb3a26ea3f809bdc4c6bec2"
+  }
+ }
+}

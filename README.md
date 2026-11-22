@@ -3,15 +3,18 @@
 The **Earth's magnetic field**, from the World Magnetic Models: a data repository of the oceansensing ocean map system, with its own
 Pages site, its own schedule and its own gigabyte, and no code of its own.
 
-**Nothing is published yet.** `PLAN.md` is the founding plan; `CLAUDE.md` carries what must not be
+**Publishing since 2026-10-16, daily.** `PLAN.md` is the founding plan; `CLAUDE.md` carries what must not be
 got wrong and the shared doc doctrine.
 
 ## What it publishes
 
 The Earth's main magnetic field by NOAA NCEI and the British Geological Survey's World Magnetic Models, evaluated by the site's pipeline for the first instant of each month: **the field** (WMMHR2025, degree 133 — the core's field and the crust's larger features): declination, inclination, and the total, horizontal, vertical, north and east intensities, a 0.25° world each (`decl-wmmhr.json`, `incl-wmmhr.json`, `magf-`, `magh-`, `magz-`, `magx-`, `magy-wmmhr.json`); **its yearly change** (the same model's secular variation): each of the seven's (`decldot-wmmhr.json` … `magydot-wmmhr.json`); and **the compass's blackout and caution zones** (WMM2025, as NOAA defines them): where the horizontal field is under 2,000 nT (2) or 6,000 nT (1), at 0.5° (`magzone-wmm.json`). Each grid is the field at the month's first instant: its `refTime`, with no span (the values are no mean), the model named as its `stream`. Three products, R2's alone.
 
-These products are published **operationally but not drawn on the website's map**; the map's status
-line still reports them when they fall behind, which is how their health stays visible.
+These products are published **operationally but not drawn on the
+website's map**. R2 alone carries them, so this repository's Pages status names none of
+them: the map's status line and the site's watchdog see only whether the
+origin publishes. Their fates are in the status on R2 and on the
+`published` branch.
 
 ## Where the data comes from
 
@@ -25,9 +28,9 @@ run time. This repository carries `pipeline/products.toml` and its publish
 workflow, and nothing else executable. Each run publishes to GitHub Pages and
 to Cloudflare R2 from one build. Related repositories: none it depends on.
 
-**Which document gets what, and what "update docs" means across all
-twenty-seven repositories, is the doctrine block at the top of `CLAUDE.md`**: the
-same text in all twenty-seven, held equal by the site's `check:docs`.
+**Which document gets what, and what "update docs" means across every
+repository of this project, is the doctrine block at the top of `CLAUDE.md`**: the
+same text in each, held equal by the site's `check:docs`.
 
 ## Structure
 
